@@ -44,7 +44,7 @@ public final class ElevatorSystem {
             if (direction.equals(Directions.UP))
             {
                 for(int i = currentFloor; i < destinationFloor; i++){
-                    System.out.println("Elevator " + Thread.currentThread().getId() + " goes " + direction + " to floor " + (i+1));
+                    System.out.println("Elevator " + elevatorId + " goes " + direction + " to floor " + (i+1));
                     // Simulate moving between floors with Thread.sleep
                     Thread.sleep(100);
                 }
@@ -52,7 +52,7 @@ public final class ElevatorSystem {
             else
             {
                 for (int i = currentFloor; i > destinationFloor; i--) {
-                    System.out.println("Elevator " + Thread.currentThread().getId() + " goes " + direction + " to floor " + (i-1));
+                    System.out.println("Elevator " + elevatorId + " goes " + direction + " to floor " + (i-1));
                     Thread.sleep(100);
                 }
             }
